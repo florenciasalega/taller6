@@ -1,0 +1,191 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/**
+===================================
+	estilos para el index.html
+===================================
+**/
+
+div[id="navigation"] > div[class="container"]{
+	padding: 8px;
+	width: 1300px;
+}
+
+.conteiner{
+	border-radius: 5px;
+	width: 1150px;
+	margin: auto;
+}
+
+.conteiner > div[id="title"]{
+	padding: 60px;
+}
+
+.conteiner > div[id="title"] > h1{
+	font-size: 40px !important;
+	width: 685px;
+	margin: auto;
+	color: #5E5E5E;
+}
+
+.conteiner > div[id="search"]{
+	margin: auto;
+}
+
+.conteiner > div[id="search"] > form{
+	width: 685px;
+	margin: auto;
+}
+
+.mod{
+	width: 609px !important;
+}
+
+/**
+======================================================
+	estilos para el login.html y registration.html
+======================================================
+**/
+
+.conteiner > div[id="panel"]{
+	width: 680px;
+	margin: auto;
+	border: 1px solid #00FFFF;
+	border-radius: 10px;
+	margin-top: 60px;
+	padding: 60px;
+}
+
+.titulo{
+
+}
+
+/**
+======================================================
+	estilos para el search.html
+======================================================
+**/
+
+.conteiner > div[id="title_search"]{
+	width: 685px;
+	margin: auto;
+}
+
+.conteiner > div[id="search_result"]{
+	width: 685px;
+	margin: auto;
+}
+
+.conteiner > div[id="results"]{
+	border: 1px solid #D4D4D4;
+	height: 800px;
+	overflow-y: scroll;
+	width: 950px;
+	margin: auto;
+	margin-top: 70px;
+	float: left;
+	margin-left: 185px;
+}
+
+.list-group li {
+    list-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+}
+
+.panel-info, .panel-rating, .panel-more1 {
+    float: left;
+    margin: 0 21px;
+}
+
+.panel-stl{
+	margin: 0px 10px;
+	padding-left: 50px;
+	margin-right: 30px;
+}
+
+.panelMain{
+	width: 890px;
+	margin: auto;
+}
+
+.conteiner > div[id="left_bar"]{
+	width: 180px;
+	height: 400px;
+	border: 1px solid #D4D4D4;
+	margin-top: 70px;
+}
+
+/**
+=============================================
+	estilos para el dashboard
+=============================================
+**/
+
+.dashcontent {
+	margin-top: -20px;
+}
+
+.dashcontent > div[id="primer"] {
+	border: 1px solid #D4D4D4;
+	height: 900px;
+	width: 18%;
+	margin-top: -50px;
+}
+
+.dashcontent > div[id="segundo"] {
+	/*border: 1px solid #D4D4D4;*/
+	height: 900px;
+	width: 64%;
+}
+
+.dashcontent > div[id="tercer"] {
+	border: 1px solid #D4D4D4;
+	height: 900px;
+	width: 18%;
+	margin-top: -50px;
+}
+
+.dashcontent > div[id="nav_top"]{
+	border: 1px solid #D4D4D4;
+	height: 50px;
+}
+
+div[id="primer"] > ul{
+	margin-top: 55px;
+}
+
+ul[id="side-menu"] > li{
+	border-bottom: 1px solid #e7e7e7;
+}
+
+div[id="nav_top"] > div[id="busqueda"] {
+	width: 238px;
+	margin-top: 9px;
+}
+
+div[id="conteiner"] {
+	width: 100%;
+	height: 100%;
+	border: 1px solid;
+}
+
+
+/*==========================
+
+============================*/
+
+a[class="navbar-brand"] {
+	float: left;
+}
+
+div[class="container"]{ 
+	width: 500px !important;
+}

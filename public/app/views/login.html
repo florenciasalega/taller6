@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      
+    </div>
+    <div class="col-5">
+      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h4 class="display-4">INGRESO</h4>
+        <form>
+            <div class="form-group">
+              <label for="exampleInputUsername1">Nombre de Usuario</label>
+              <input type="text" class="form-control" ng-model=login.username id="exampleUsername1" aria-describedby="usernameHelp" placeholder="Ingrese su usuario">
+              <small id="usernameHelp" class="form-text text-muted">No comparta su información con alguien más.</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Contraseña</label>
+              <input type="password" class="form-control" ng-model="login.password" id="exampleInputPassword1" placeholder="Ingrese su contraseña">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+            </div>
+            <button type="submit" class="btn btn-primary" ng-click="abrir()">Entrar</button>
+          </form>
+      </div>
+    </div>
+    <div class="col">
+      
+    </div>
+  </div>
+</div>

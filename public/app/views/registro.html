@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      
+    </div>
+    <div class="col-5">
+      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h4 class="display-4">Registro</h4>
+        <form>
+            <div class="form-group">
+              <label for="exampleInputUsername1">Nombre de Usuario</label>
+              <input type="text" class="form-control" ng-model="registro.username" id="exampleInputUsername1" aria-describedby="UsernameHelp" placeholder="Ingrese su usuario">
+              <small id="UsernameHelp" class="form-text text-muted">No comparta sus datos con alguien más.</small>
+            </div>
+            <div class="form-group">
+              <label >Nombre</label>
+              <input type="text" class="form-control"  ng-model="registro.nombre" id="exampleInputName1" placeholder="Ingrese su nombre">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputSurname1">Apellido</label>
+              <input type="text" class="form-control" ng-model="registro.surname" id="exampleInputSurname1" placeholder="Ingrese su apellido">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Contraseña</label>
+              <input type="password" class="form-control" ng-model="registro.password" id="exampleInputPassword1" placeholder="Ingrese su contraseña">
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Recordarme</label>
+            </div>
+            <button type="submit"  ng-click="registro()" class="btn btn-primary">Registrar</button>
+          </form>
+      </div>
+    </div>
+    <div class="col">
+      
+    </div>
+  </div>
+</div>

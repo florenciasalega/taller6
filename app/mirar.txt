@@ -1,0 +1,15 @@
+TENER EN CUENTA
+
+1 - views: aca van todas las views que crees por ejemplo : login
+
+2 - controllers : aca declaras todos los controllers que van relacionados con cada view
+
+3 - services : aca se crea la capa para realizar la conexion hacia la api.
+
+
+urls para mirar : 
+
+https://getbootstrap.com/
+
+https://getbootstrap.com/docs/4.3/examples/
+

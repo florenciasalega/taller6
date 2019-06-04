@@ -1,0 +1,13 @@
+doctype html
+html(ng-app="app")
+  head
+    title= title
+    script(type="text/javascript", src="/javascripts/angular-1.7.8/angular.js")
+    script(type="text/javascript", src="/javascripts/angular-1.7.8/angular-ui-router.min.js")
+    script(type="text/javascript", src="/javascripts/ocLazyLoad-master/dist/ocLazyLoad.js")
+    link(rel='stylesheet', href='/stylesheets/bootstrap-4.0.0-alpha.6/dist/css/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/bootstrap-4.0.0-alpha.6/dist/css/bootstrap-reboot.min.css')
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    script(type="text/javascript", src="/app/app.js")
+  body
+    block content
