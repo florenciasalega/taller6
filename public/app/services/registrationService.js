@@ -13,8 +13,8 @@ angular.module('app').factory('registrationServices', ['$http', '$q', function (
             username : username,
             nombre: name,
             apellido: surname,
-			password: pass,
-            nocacheparam: new Date().getTime() 
+			password: pass
+            //nocacheparam: new Date().getTime() 
             
             /*username : 'FlorSalega',
             name: 'Flor',
@@ -24,11 +24,15 @@ angular.module('app').factory('registrationServices', ['$http', '$q', function (
 		};
         console.log(param);
         //paso ruta de la api (url servicio + route)
-        $http.get(serviceBase + '/usuarios/create' , {
-            params: param
-        }, function(resp) {
-            deferred.response(resp);
+        $http.post(serviceBase + '/usuarios/create' , param).then(function(response){
+            deferred.resolve(response);
         });
+
+        // $http.post(serviceBase + '/usuarios/create' , param, function(resp) {
+        //     deferred.response(resp);
+        // }, function(err){ alert(err)});
+
+
         return deferred.promise;
     };
 

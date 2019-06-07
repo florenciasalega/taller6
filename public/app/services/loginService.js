@@ -11,15 +11,13 @@ angular.module('app').factory('loginServices', ['$http', '$q', function ($http, 
 
 		var param  = {
 			username : username,
-			pass: pass,
+			password: pass,
 			nocacheparam: new Date().getTime()
 		};
         
         //paso ruta de la api (url servicio + route)
-        $http.get(serviceBase + '/usuarios/authenticate' , {
-            params: param
-        }, function(resp) {
-            deferred.response(resp);
+        $http.post(serviceBase + '/usuarios/authenticate' , param).then(function(response){
+            deferred.resolve(response);
         });
         return deferred.promise
     };
