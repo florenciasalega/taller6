@@ -5,8 +5,7 @@ angular.module('app').controller('LoginCtrl', ['$scope', 'loginServices', '$wind
         password: ""
     };
 
-    $scope.abrir = function() {
-        alert($scope.login.username);  
+    $scope.abrir = function() { 
         loginServices.postLogin($scope.login.username, $scope.login.password)
         .then(function(response){
             

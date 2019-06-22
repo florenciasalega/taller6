@@ -29,8 +29,14 @@ app.config(['$ocLazyLoadProvider', '$stateProvider', '$urlRouterProvider' ,
              },
              {
                  name: 'dashboard',
-                 files: ['/app/controllers/dashController.js']
-             }
+                 files: ['/app/controllers/dashboardController.js',
+                        '/app/services/dashServices.js']
+             },
+             {
+                name: 'payment',
+                files: ['/app/controllers/paymentController.js',
+                       '/app/services/paymentService.js']
+            }
 
             ]
         });
@@ -89,6 +95,20 @@ app.config(['$ocLazyLoadProvider', '$stateProvider', '$urlRouterProvider' ,
             resolve: {
                 RegistrationCtrl: ['$ocLazyLoad', function($ocLazyLoad){
                     return $ocLazyLoad.load('dashboard');
+                }]
+            }
+        })
+        .state('payment', {
+            url: "/payment",
+            views : {
+                "" : {
+                    templateUrl:"/app/views/payment.html",
+                    controller: "payCtrl"
+                }
+            },
+            resolve: {
+                PaymentCtrl: ['$ocLazyLoad', function($ocLazyLoad){
+                    return $ocLazyLoad.load('payment');
                 }]
             }
         })

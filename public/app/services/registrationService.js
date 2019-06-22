@@ -22,7 +22,7 @@ angular.module('app').factory('registrationServices', ['$http', '$q', function (
 			pass: 'Probando contraseña234',*/
 
 		};
-        console.log(param);
+       // console.log(param);
         //paso ruta de la api (url servicio + route)
         $http.post(serviceBase + '/usuarios/create' , param).then(function(response){
             deferred.resolve(response);

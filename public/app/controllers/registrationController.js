@@ -15,7 +15,7 @@ angular.module('app').controller('RegistrationCtrl', ['$scope', 'registrationSer
         registrationServices.PostRegistration($scope.registro.username,$scope.registro.nombre, $scope.registro.surname, $scope.registro.password)
         .then(function(response){
             $window.sessionStorage.setItem('id', response.data); //tomo token
-            alert("exito en registro ingrese");
+            alert("Se ha registrado con éxito. Diríjase a Ingreso para acceder");
         });
     }
-}]);
+}]);    
