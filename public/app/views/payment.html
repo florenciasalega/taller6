@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+      <div class="col">
+        
+      </div>
+      <div class="col-5">
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+          <h4 class="display-4">REGISTRAR COMPRA</h4>
+          <form>
+              <div class="form-group">
+                <label for="exampleInputUsername1">Nombre del titular</label>
+                <input type="text" class="form-control" ng-model="payment.nametit" id="exampleInputnametit1" aria-describedby="nametitHelp">
+            </div>
+              <div class="form-group">
+                  <!--<select name="dnitype" id="dnitype" ng-model="payment.dnitype" multiple>
+                      <option value="dni">dni</option>
+                    <option value="lc">libreta civica</option>
+                    <option value="le">libreta enrolamiento</option>
+                    <option value="le">dni extranjero</option>
+                  </select>-->
+                <select name="dnitype" id="dnitype" ng-model="payment.dnitype">
+                    <option value="dni">dni</option>
+                    <option value="lc">libreta civica</option>
+                    <option value="le">libreta enrolamiento</option>
+                    <option value="le">dni extranjero</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputSurname1">Número</label>
+                <input type="text" class="form-control" ng-model="payment.dni" id="exampleInputDni1" placeholder="Ingrese su número de documento">
+              </div>
+              <div class="form-group">
+                <label >Número de Tarjeta </label>
+                <input type="text" class="form-control"  ng-model="payment.card" id="exampleInputCard1" placeholder="Ingrese su tipo de tarjeta">
+              </div>
+              <div class="form-group">
+                <label >Mes de vencimiento </label>
+                <input type="text" class="form-control"  ng-model="payment.month" id="exampleInputMonth1" placeholder="Ingrese el mes de vencimiento">
+              </div>
+              <div class="form-group">
+                <label >Año de vencimiento </label>
+                <input type="text" class="form-control"  ng-model="payment.year" id="exampleInputYear1" placeholder="Ingrese el año de vencimiento">
+              </div>
+              <div class="form-group">
+                <label >Código de Seguridad </label>
+                <input type="text" class="form-control"  ng-model="payment.code" id="exampleInputCode1" placeholder="Ingrese la clave de seguridad">
+              </div>
+            <button type="submit"  ng-click="comprar_button()" class="btn btn-primary">Confirmar Comprar</button>
+            </form>
+        </div>
+      </div>
+      <div class="col">
+        
+      </div>
+    </div>
+  </div>

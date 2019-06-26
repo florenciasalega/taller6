@@ -1,0 +1,17 @@
+
+<!DOCTYPE html >
+<html ng-app="miModulo">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="angular.min.js"></script>
+    <script src="modulo.js"></script>
+</head>
+ 
+<body ng-controller="miControlador">
+	<p>Frase con espacios</p>
+	<p>{{"Frase con espacios" | quitaEspacios}}</p>
+	<p>{{data.nombre}}</p>
+	<p>{{data.nombre | quitaEspacios}}</p>
+</body>
+</html>

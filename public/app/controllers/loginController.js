@@ -9,7 +9,7 @@ angular.module('app').controller('LoginCtrl', ['$scope', 'loginServices', '$wind
         loginServices.postLogin($scope.login.username, $scope.login.password)
         .then(function(response){
             
-            $window.sessionStorage.setItem('id', response.data); //tomo token
+            $window.sessionStorage.setItem('id', JSON.stringify ( response.data )); //tomo token
             $state.go('dash');
              //$window.location.href = "#!/dash";
         });
