@@ -1,5 +1,5 @@
 
-angular.module('app').controller('RegistrationCtrl', ['$scope', 'registrationServices','$window', function($scope, registrationServices,$window){
+angular.module('app').controller('RegistrationCtrl', ['$scope', 'registrationServices','$window','$state', function($scope, registrationServices,$window,$state){
     
     // $scope.registro = {
     //     username : "",
@@ -14,8 +14,18 @@ angular.module('app').controller('RegistrationCtrl', ['$scope', 'registrationSer
 
         registrationServices.PostRegistration($scope.registro.username,$scope.registro.nombre, $scope.registro.surname, $scope.registro.password)
         .then(function(response){
-            $window.sessionStorage.setItem('id', response.data); //tomo token
-            alert("Se ha registrado con éxito. Diríjase a Ingreso para acceder");
+            if(response.status == "400"){
+               // error 
+               alert("LOS DATOS INGRESADOS NO SON CORRECTOS." + response.data.message);
+            }else{
+                // esta bien
+                $window.sessionStorage.setItem('id', response.data); //tomo token
+                //console.log(response);
+                alert("Se ha registrado con éxito. Diríjase a Ingreso para acceder");  
+                $state.go('Login');  
+            }
+            
+            
         });
     }
 }]);    

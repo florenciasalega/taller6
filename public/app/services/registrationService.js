@@ -25,7 +25,11 @@ angular.module('app').factory('registrationServices', ['$http', '$q', function (
        // console.log(param);
         //paso ruta de la api (url servicio + route)
         $http.post(serviceBase + '/usuarios/create' , param).then(function(response){
+            // exito
             deferred.resolve(response);
+        }).catch(function (error){
+            // error status, messages
+            deferred.resolve(error);
         });
 
         // $http.post(serviceBase + '/usuarios/create' , param, function(resp) {

@@ -18,7 +18,13 @@ angular.module('app').factory('loginServices', ['$http', '$q', function ($http, 
         //paso ruta de la api (url servicio + route)
         $http.post(serviceBase + '/usuarios/authenticate' , param).then(function(response){
             deferred.resolve(response);
+        }).catch(function (error){
+            // error status, messages
+            deferred.resolve(error);
         });
+
+
+
         return deferred.promise
     };
 

@@ -15,6 +15,10 @@ function($scope, dashServices,$state, $stateParams, $window){
         $state.go('payment');
     }
 
+    $scope._out = function(prod){
+        $state.go('Home');
+    }
+
 
 
 }]);

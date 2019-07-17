@@ -10,17 +10,17 @@ angular.module('app').factory('paymentService', ['$http', '$q', function ($http,
     // primer llamada
     var _postmp = function (nametit,dnitype,dni,card, month, year, code) {
         var deferred = $q.defer();
-        nametit="APRO";
+        nametit="APRO_123";
 
         cardHolder_global = {
             name: nametit,
 		    identification: {
-			    type: dnitype,
+			    type: "DNI",
 			    number: dni
 		    }
         };
         var param = {
-            cardHolder : cardHolder_global,
+            cardholder : cardHolder_global,
             card_number: card,
             expiration_month: month,
             expiration_year: year,
@@ -41,31 +41,36 @@ angular.module('app').factory('paymentService', ['$http', '$q', function ($http,
 
 
     var _postmyapp = function (id_token, precio, session){
-        console.log(cardHolder_global);
+        //console.log(cardHolder_global);
         var deferred = $q.defer();
-
+        console.log(precio)
         var param = {
-            amount: precio,
+        
+            amount: 10,
+            //transaction_amount: parseInt(precio) ,
             mp_payment_method_id: "master",
-            dni : cardHolder_global.identification.number,
-            mp_card_token:  id_token
+            dni: cardHolder_global.identification.number,
+            mp_card_token: id_token
 
         };
 
-        
-        /*$http.defaults.headers.common.Authorization = 'Bearer ' + id_token;
-        var headers = new Headers();
-        headers.append('Content-Type', "application/json");
-        headers.append("Authorization", "bearer " + session.token);*/
 
-        var headers = {
-            'Content-Type':  "application/json",
-            'Authorization': "bearer " + session.token
-            
-        }; 
-        $http.post(myappBase,param, headers).then(function(response){
+        var req = {
+            method: 'POST',
+            url: myappBase,
+            headers: {
+              'Content-Type':'application/json' ,
+              'Authorization': "bearer " + session.token
+            },
+            data: JSON.stringify(param)
+        }
+        $http(req).then(function(response){
             deferred.resolve(response);
+        }).catch(function (error){
+            // error status, messages
+            deferred.resolve(error);
         });
+
         return deferred.promise;
     };
 

@@ -47,24 +47,24 @@ angular.module('app').factory('dashServices', ['$http', '$q', function ($http, $
             },
             {
                 id: 6,
-			    images : "https://images-na.ssl-images-amazon.com/images/I/51%2B2v-YYYtL._SX327_BO1,204,203,200_.jpg",
-                precio : "850",
-                tittle : "Rayuela",
-			    description: "El amor turbulento de Oliveira y La Maga, los amigos del Club de la Serpiente, las caminatas por París en busca del cielo y el infierno tienen su reverso en la aventura simétrica de Oliveira, Talira y Traveler en un Buenos Aires teñido por el recuerdo."
+			    images : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRucB9L45jnsCGNvxbZpAuImEiv00uhbi6hFo1AeLjaQcjmN7C7",
+                precio : "950",
+                tittle : "El príncipe",
+			    description: "Es una obra que contradice la tradición filosófica del pensamiento político antiguo en la cual la práctica política se encuentra ensombrecida por la idealización de gobiernos y ciudades utópicas."
 		    },
             {
-                id: 5,
-			    images : "https://images-na.ssl-images-amazon.com/images/I/51%2B2v-YYYtL._SX327_BO1,204,203,200_.jpg",
-                precio : "850",
-                tittle : "Rayuela",
-			    description: "El amor turbulento de Oliveira y La Maga, los amigos del Club de la Serpiente, las caminatas por París en busca del cielo y el infierno tienen su reverso en la aventura simétrica de Oliveira, Talira y Traveler en un Buenos Aires teñido por el recuerdo."
+                id: 7,
+			    images : "https://i.ytimg.com/vi/DevNudhaGv4/maxresdefault.jpg",
+                precio : "350",
+                tittle : "El arte de la guerra",
+			    description: "Es una obra para comprender las raíces de un conflicto y buscar una solución. La mejor victoria es vencer sin combatir, nos dice Sun Tzu, y ésa es la distinción entre le hombre prudente y el ignorante."
             },
             {
-                id: 5,
-			    images : "https://images-na.ssl-images-amazon.com/images/I/51%2B2v-YYYtL._SX327_BO1,204,203,200_.jpg",
-                precio : "850",
-                tittle : "Rayuela",
-			    description: "El amor turbulento de Oliveira y La Maga, los amigos del Club de la Serpiente, las caminatas por París en busca del cielo y el infierno tienen su reverso en la aventura simétrica de Oliveira, Talira y Traveler en un Buenos Aires teñido por el recuerdo."
+                id: 8,
+			    images : "https://www.popularlibros.com/imagenes_grandes/9788425/978842542859.JPG",
+                precio : "960",
+                tittle : "La divina comedia",
+			    description: "Dante comienza su viaje imaginario, “perdido en una selva oscura” (alegoría de la vida humana, sus dificultades y tentaciones), debiendo ser guiado por el poeta Virgilio (en inglés) para conseguir salir, atravesando el infierno, el purgatorio y el paraíso."
 		    },
         
 		 

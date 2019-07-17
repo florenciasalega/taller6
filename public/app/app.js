@@ -36,6 +36,11 @@ app.config(['$ocLazyLoadProvider', '$stateProvider', '$urlRouterProvider' ,
                 name: 'payment',
                 files: ['/app/controllers/paymentController.js',
                        '/app/services/paymentService.js']
+            },
+            {
+                name: 'success',
+                files: ['/app/controllers/successController.js',
+                       '/app/services/successService.js']
             }
 
             ]
@@ -109,6 +114,20 @@ app.config(['$ocLazyLoadProvider', '$stateProvider', '$urlRouterProvider' ,
             resolve: {
                 PaymentCtrl: ['$ocLazyLoad', function($ocLazyLoad){
                     return $ocLazyLoad.load('payment');
+                }]
+            }
+        })
+        .state('success', {
+            url: "/success",
+            views : {
+                "" : {
+                    templateUrl:"/app/views/success.html",
+                    controller: "successCtrl"
+                }
+            },
+            resolve: {
+                successCtrl: ['$ocLazyLoad', function($ocLazyLoad){
+                    return $ocLazyLoad.load('success');
                 }]
             }
         })

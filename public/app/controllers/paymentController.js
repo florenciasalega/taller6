@@ -22,26 +22,31 @@ function($scope, paymentService, $window, $state, $stateParams){
         $scope.mp_card_token = JSON.parse($window.sessionStorage.getItem('id_mp')).id;
         $scope.session = JSON.parse($window.sessionStorage.getItem('id'));
        console.log($scope.session);
+       console.log($scope.mp_card_token);
         // A MARCOS
-        paymentService.postmyapp($scope.mp_card_token,prod_precio,  $scope.session)
+        paymentService.postmyapp($scope.mp_card_token, prod_precio,  $scope.session)
         .then(function(response){
             console.log(response);
-            alert(response.status);
-            if(response.status == "approved") {
-                alert("compra con exito");
-                // redirect html
-               /* $state.go('####');*/
-            }else{
-                // alert error
-                alert("LOS DATOS INGRESADOS NO SON CORRECTOS");
-            }
+           
+
+            if(response.status == "400"){
+                // error 
+                alert("LOS DATOS INGRESADOS NO SON CORRECTOS. VERIFIQUE SU NUMERO DE TARJETA");
+             }else{
+                 // esta bien
+                 //console.log(response);
+                 $state.go('success');  
+             }
+
         })
 
 
 
 
-        }, function(err){
-            console.log(err);
+         /*
+         },
+         function(err){
+            console.log(err);*/
         });
 
         // reccuperas el id_mp del session getItem
